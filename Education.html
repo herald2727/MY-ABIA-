@@ -152,7 +152,23 @@
           </div>
           <a href="gov.html" class="block text-lg text-gray-700 hover:text-black">Government</a>
           <a href="About page.html" class="block text-lg text-gray-700 hover:text-black">About</a>
-          <a href="Category.html" class="block text-lg text-gray-700 hover:text-black">Categories</a>
+          <div class="relative">
+            <button
+              onclick="document.getElementById('mobile-categories-dropdown').classList.toggle('hidden'); document.getElementById('mobile-categories-chevron').classList.toggle('rotate-180')"
+              class="w-full flex justify-between items-center text-lg text-gray-700 hover:text-black focus:outline-none">
+              Categories
+              <i id="mobile-categories-chevron"
+                class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="mobile-categories-dropdown" class="hidden pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+              <a href="business-economy.html" class="block text-base text-gray-600 hover:text-black py-1">Business</a>
+              <a href="Health.html" class="block text-base text-gray-600 hover:text-black py-1">Health Services</a>
+              <a href="Education.html" class="block text-base text-gray-600 hover:text-black py-1">Education</a>
+              <a href="Restaurant.html" class="block text-base text-gray-600 hover:text-black py-1">Restaurants</a>
+              <a href="Market.html" class="block text-base text-gray-600 hover:text-black py-1">Markets</a>
+              <a href="tourist.html" class="block text-base text-gray-600 hover:text-black py-1">Tourism</a>
+            </div>
+          </div>
           <a href="Government-announcement.html" class="block text-lg text-gray-700 hover:text-black">Announcements</a>
           <a href="Admin page.html" class="block text-lg text-gray-700 hover:text-black">Admin</a>
           <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">

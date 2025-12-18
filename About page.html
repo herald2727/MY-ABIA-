@@ -446,7 +446,30 @@
                     </div>
                     <a href="gov.html" class="block text-lg text-gray-700 hover:text-black">Government</a>
                     <a href="About page.html" class="block text-lg text-gray-700 hover:text-black">About</a>
-                    <a href="Category.html" class="block text-lg text-gray-700 hover:text-black">Categories</a>
+                    <div class="relative">
+                        <button
+                            onclick="document.getElementById('mobile-categories-dropdown').classList.toggle('hidden'); document.getElementById('mobile-categories-chevron').classList.toggle('rotate-180')"
+                            class="w-full flex justify-between items-center text-lg text-gray-700 hover:text-black focus:outline-none">
+                            Categories
+                            <i id="mobile-categories-chevron"
+                                class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div id="mobile-categories-dropdown"
+                            class="hidden pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+                            <a href="business-economy.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Business</a>
+                            <a href="Health.html" class="block text-base text-gray-600 hover:text-black py-1">Health
+                                Services</a>
+                            <a href="Education.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Education</a>
+                            <a href="Restaurant.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Restaurants</a>
+                            <a href="Market.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Markets</a>
+                            <a href="tourist.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Tourism</a>
+                        </div>
+                    </div>
                     <a href="Emergency page.html" class="block text-lg text-gray-700 hover:text-black">Emergency</a>
                     <a href="Government-announcement.html"
                         class="block text-lg text-gray-700 hover:text-black">Announcements</a>
@@ -473,18 +496,245 @@
     </section>
 
 
-    <section class="text-4xl md:text-5xl font-bold mb-6 md:mt-10">
-        <span class="text-4xl font-bold text-black mb-4 block text-center">Foundation</span>
-        <p class="text-2xl text-gray-900 text-center font-light mb-10 max-w-2xl mx-auto">
-            My Abia exists to map the heartbeat of our state. We built this directory so that finding a business or help
-            becomes as natural as asking a neighbor.
-        </p>
-        <div class="flex justify-center gap-5 items-center">
-            <button
-                class="px-6 py-2 border border-gray-700 rounded hover:border-gray-900 hover:bg-black hover:text-white transition text-lg font-bold">Explore</button>
-            <a href="#"
-                class="text-lg font-bold flex items-center gap-2 hover:border px-6 py-2 hover:border-gray-700 hover:rounded">Learn
-                <i class="fa-solid fa-chevron-right text-xs"></i></a>
+    <section class="max-w-7xl mx-auto px-6 py-16 mb-10 border-t border-gray-200">
+        <div class="text-center mb-16 animate-fade-up">
+            <span class="text-lg font-bold text-green-600 mb-2 block tracking-wider uppercase">Our Heritage &
+                Future</span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">The Story of "God's Own State"</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                From the historic strength of the Aro Confederacy to the bustling innovation of modern Aba, Abia State
+                is a land of resilient people, rich culture, and rapid progress.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <!-- Ancient Facts -->
+            <div class="bg-stone-50 rounded-2xl p-8 border border-stone-200 animate-fade-up shadow-sm hover:shadow-md transition-shadow"
+                style="animation-delay: 100ms;">
+                <div id="ancient-carousel"
+                    class="relative h-64 w-full mb-8 rounded-xl overflow-hidden shadow-md group bg-gray-200">
+                    <!-- Carousel Images -->
+                    <img src="https://i.pinimg.com/736x/16/10/71/161071a39675e6b7157391e29f2e37d7.jpg"
+                        alt="Ancient Igbo Culture"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 sepia-[.20]">
+                    <img src="https://i.pinimg.com/736x/9f/f3/d4/9ff3d48362efd0d9cd35de4bb7d97629.jpg"
+                        alt="Aba Women's Riot 1929"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 sepia-[.30]"
+                        onerror="this.src='https://i.pinimg.com/736x/74/fb/df/74fbdf953da1c24d74fb0d22b1b6ac4e.jpg'">
+                    <img src="https://i.pinimg.com/736x/41/e2/13/41e213fed033d289252d9e762e4cf815.jpg"
+                        alt="Akwete Cloth Weaving"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                        onerror="this.src='https://i.pinimg.com/736x/79/25/04/792504f3905970e731a4505eeebd0f1e.jpg'">
+                    <img src="https://i.pinimg.com/736x/15/72/aa/1572aac3a706988c2aa8f4be3049606f.jpg"
+                        alt="Traditional Masquerade"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.pinimg.com/1200x/19/bf/67/19bf67ee104866e0d0c032ef5cdb0369.jpg"
+                        alt="Historic Arochukwu Landscape"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 sepia-[.20]">
+
+                    <!-- Overlay & Label -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
+                    <div
+                        class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded text-sm font-bold shadow-sm text-stone-800 z-20">
+                        Ancient Roots
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-bold mb-6 flex items-center gap-3 text-stone-800">
+                    <i class="fa-solid fa-hourglass-half text-stone-600"></i> Ancient History
+                </h3>
+
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-stone-700 font-bold">1</span>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">The Aro Confederacy</h4>
+                            <p class="text-gray-700 mt-1">Historically, the region was part of the powerful Aro
+                                Confederacy, a dominant Igbo trading and spiritual union that influenced much of
+                                pre-colonial Eastern Nigeria.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-stone-700 font-bold">2</span>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">The Women's War of 1929</h4>
+                            <p class="text-gray-700 mt-1">The famous Aba Women's Riot, a massive anti-colonial protest
+                                led by rural women, began here (Oloko), marking a pivotal moment in Nigeria's fight for
+                                justice.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-stone-700 font-bold">3</span>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Akwete Weaving</h4>
+                            <p class="text-gray-700 mt-1">The unique Akwete cloth, hand-woven by the women of Ukwa East,
+                                remains a symbol of indigenous craftsmanship and cultural identity.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Modern Facts -->
+            <div class="bg-green-50 rounded-2xl p-8 border border-green-200 animate-fade-up shadow-sm hover:shadow-md transition-shadow"
+                style="animation-delay: 200ms;">
+                <div id="modern-carousel"
+                    class="relative h-64 w-full mb-8 rounded-xl overflow-hidden shadow-md group bg-gray-200">
+                    <!-- Carousel Images -->
+                    <img src="images/aba_road_rehabilitation.png" alt="Modern Abia Infrastructure"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+                        onerror="this.src='https://images.unsplash.com/photo-1542385151-efd9000d63f2?w=800&q=80'">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2zSLw81MedP4RSaQz7-4Ls6o2ub-JBTnXrg&s"
+                        alt="Geometric Power Plant"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                        onerror="this.src='https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80'">
+                    <img src="https://independent.ng/wp-content/uploads/One-of-the-shoe-factories-in-Aba.jpg"
+                        alt="Aba Manufacturing - Shoes"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSl7SAD7mHFgiatXj3hSqMjk49cuJClj6GgQ&s"
+                        alt="Enyimba Economic City"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                        onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80'">
+                    <img src="https://i.pinimg.com/736x/92/1d/9e/921d9ede0c07b3b6989b43515bab8f1e.jpg"
+                        alt="Governor Alex Otti Leadership"
+                        class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 opacity-0">
+
+                    <!-- Overlay & Label -->
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10"></div>
+                    <div
+                        class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded text-sm font-bold shadow-sm text-green-700 z-20">
+                        Modern Era
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-bold mb-6 flex items-center gap-3 text-green-900">
+                    <i class="fa-solid fa-rocket text-green-600"></i> Modern Development
+                </h3>
+
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-green-200 flex items-center justify-center text-green-700 font-bold">1</span>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Creation & Identity</h4>
+                            <p class="text-gray-700 mt-1">Created on August 27, 1991, Abia is known as "God's Own
+                                State". It is a key oil-producing state and a commercial powerhouse in the region.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-green-200 flex items-center justify-center text-green-700 font-bold">2</span>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">The "China of Africa"</h4>
+                            <p class="text-gray-700 mt-1">Aba, the commercial nerve center, is renowned for its
+                                ingenuity in manufacturing, shoes, and textiles, earning it the reputation as the "China
+                                of Africa".</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-green-200 flex items-center justify-center text-green-700 font-bold">3</span>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">The New Abia</h4>
+                            <p class="text-gray-700 mt-1">Under the leadership of Governor Dr. Alex Otti, the state is
+                                undergoing massive infrastructure renewal, geometric power integration, and urban
+                                modernization.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Facts Carousel Script -->
+        <script>
+            function initFactCarousel(id, interval) {
+                const container = document.getElementById(id);
+                if (!container) return;
+                const images = container.querySelectorAll('img');
+                if (images.length === 0) return;
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    // Hide current
+                    images[currentIndex].classList.remove('opacity-100');
+                    images[currentIndex].classList.add('opacity-0');
+
+                    // Update index
+                    currentIndex = (currentIndex + 1) % images.length;
+
+                    // Show next
+                    images[currentIndex].classList.remove('opacity-0');
+                    images[currentIndex].classList.add('opacity-100');
+                }, interval);
+            }
+
+            // Start carousels with slightly different timings to look more organic
+            document.addEventListener('DOMContentLoaded', () => {
+                initFactCarousel('ancient-carousel', 4000);
+                initFactCarousel('modern-carousel', 4500);
+            });
+        </script>
+    </section>
+
+    <section class="w-full bg-gradient-to-b from-white to-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12 animate-fade-up">
+                <span class="text-lg font-bold text-green-600 mb-2 block tracking-wider uppercase">Our Song</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Abia State Anthem</h2>
+                <div class="h-1 w-24 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-5xl mx-auto">
+
+                <!-- English Version -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100 text-center relative overflow-hidden group animate-fade-up"
+                    style="animation-delay: 100ms;">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-green-600"></div>
+                    <div class="absolute -right-4 -top-4 text-gray-50 opacity-10 rotate-12">
+                        <i class="fa-solid fa-music text-9xl"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-6 text-green-800">English Version</h3>
+                    <p class="text-lg leading-relaxed font-medium text-gray-700 italic">
+                        "The land of grace and faith,<br>
+                        That's Abia God's own state,<br>
+                        The home of trade and enterprise,<br>
+                        Alfa state we hail.<br>
+                        <br>
+                        We shall walk the top to tarry on top,<br>
+                        Abia must be great,<br>
+                        On equity we stand, together we can,<br>
+                        God bless Abia!"
+                    </p>
+                </div>
+
+                <!-- Igbo Version -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100 text-center relative overflow-hidden group animate-fade-up"
+                    style="animation-delay: 200ms;">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-black"></div>
+                    <div class="absolute -right-4 -top-4 text-gray-50 opacity-10 rotate-12">
+                        <i class="fa-solid fa-music text-9xl"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-6 text-black">Igbo Version</h3>
+                    <p class="text-lg leading-relaxed font-medium text-gray-700 italic">
+                        "Ala Agoziri Obodo Chukwu ka Abia bu<br>
+                        Obodo Ahia na Oru aka<br>
+                        Steeti mbu Ekere<br>
+                        Anyi ga Arusi oru ike,<br>
+                        <br>
+                        I bu Ndi Mbu<br>
+                        Abia ga adi Ukwu<br>
+                        Egbe bere ugo bere, Igwe bu ike<br>
+                        Chukwu gozie Abia."
+                    </p>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -499,19 +749,20 @@
 
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        
+
             <div
                 class="border border-gray-200 p-8 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-white flex flex-col justify-between min-h-[300px]">
                 <div>
                     <i class="fa-solid fa-store text-3xl mb-6"></i>
                     <h3 class="text-2xl font-bold mb-3">Local Business</h3>
-                    <p class="text-gray-700 text-lg">Small shops gain the visibility they deserve in their own state.</p>
+                    <p class="text-gray-700 text-lg">Small shops gain the visibility they deserve in their own state.
+                    </p>
                 </div>
                 <a href="#" class="text-lg font-bold flex items-center gap-1 mt-6">Explore <i
                         class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
-        
-            
+
+
             <div
                 class="border border-gray-200 p-8 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-white flex flex-col justify-between min-h-[300px]">
                 <div>
@@ -522,8 +773,8 @@
                 <a href="#" class="text-lg font-bold flex items-center gap-1 mt-6">Explore <i
                         class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
-        
-        
+
+
             <div
                 class="border border-gray-200 p-8 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-white flex flex-col justify-between min-h-[300px]">
                 <div>
@@ -534,8 +785,8 @@
                 <a href="#" class="text-lg font-bold flex items-center gap-1 mt-6">Explore <i
                         class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
-        
-        
+
+
             <div
                 class="border border-gray-200 p-8 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-white flex flex-col justify-between min-h-[300px]">
                 <div>
@@ -547,7 +798,7 @@
                         class="fa-solid fa-chevron-right text-xs"></i></a>
             </div>
         </div>
-        </section>
+    </section>
 
     </section>
 
@@ -565,8 +816,7 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="images/solo.jpg"
-                            alt="Solomon Nwabam">
+                        <img src="images/solo.jpg" alt="Solomon Nwabam">
                     </div>
                     <div>
                         <h3 class="team-name">Nwabam Solomon</h3>
@@ -584,8 +834,7 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="images/Laughter.jpg"
-                            alt="Laughter">
+                        <img src="images/Laughter.jpg" alt="Laughter">
                     </div>
                     <h3 class="team-name">Irolewe Laughter</h3>
                     <p class="team-role mb-2">Frontend Developer</p>
@@ -598,8 +847,7 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="images/Gabriel herald.jpg"
-                            alt="Gabriel Herald">
+                        <img src="images/Gabriel herald.jpg" alt="Gabriel Herald">
                     </div>
                     <h3 class="team-name">Gabriel Herald</h3>
                     <p class="team-role mb-2">Frontend Developer</p>
@@ -612,8 +860,7 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="images/shedrrack everest.jpg"
-                            alt="Shedrack Everest">
+                        <img src="images/shedrrack everest.jpg" alt="Shedrack Everest">
                     </div>
                     <h3 class="team-name">Shedrack Everest</h3>
                     <p class="team-role mb-2">Frontend Developer</p>
@@ -626,8 +873,7 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="images/Gabriel destiny.jpg"
-                            alt="Gabriel Destiny">
+                        <img src="images/Gabriel destiny.jpg" alt="Gabriel Destiny">
                     </div>
                     <h3 class="team-name">Gabriel Destiny</h3>
                     <p class="team-role mb-2">Frontend Developer</p>
@@ -640,8 +886,7 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="images/Emma fx.jpg"
-                            alt="Emmanuel Chidiebube">
+                        <img src="images/Emma fx.jpg" alt="Emmanuel Chidiebube">
                     </div>
                     <h3 class="team-name">Emmanuel Chidiebube</h3>
                     <p class="team-role mb-2">Frontend Developer</p>
@@ -654,8 +899,7 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="images/Oga james.jpg" 
-                        alt="James Ochiabuto">
+                        <img src="images/Oga james.jpg" alt="James Ochiabuto">
                     </div>
                     <h3 class="team-name">James Ochiabuto</h3>
                     <p class="team-role mb-2">Frontend Developer</p>
@@ -668,8 +912,8 @@
 
                 <div class="team-card">
                     <div class="team-avatar">
-                        <img src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?w=400&q=80" 
-                        alt="Chigozie David">
+                        <img src="images/chigozie.jpg"
+                            alt="Chigozie David">
                     </div>
                     <h3 class="team-name">Chigozie David</h3>
                     <p class="team-role mb-2">Frontend Developer</p>

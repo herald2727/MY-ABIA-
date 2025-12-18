@@ -168,7 +168,23 @@
           </div>
           <a href="gov.html" class="block text-lg text-gray-700 hover:text-black">Government</a>
           <a href="About page.html" class="block text-lg text-gray-700 hover:text-black">About</a>
-          <a href="Category.html" class="block text-lg text-gray-700 hover:text-black">Categories</a>
+          <div class="relative">
+            <button
+              onclick="document.getElementById('mobile-categories-dropdown').classList.toggle('hidden'); document.getElementById('mobile-categories-chevron').classList.toggle('rotate-180')"
+              class="w-full flex justify-between items-center text-lg text-gray-700 hover:text-black focus:outline-none">
+              Categories
+              <i id="mobile-categories-chevron"
+                class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="mobile-categories-dropdown" class="hidden pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+              <a href="business-economy.html" class="block text-base text-gray-600 hover:text-black py-1">Business</a>
+              <a href="Health.html" class="block text-base text-gray-600 hover:text-black py-1">Health Services</a>
+              <a href="Education.html" class="block text-base text-gray-600 hover:text-black py-1">Education</a>
+              <a href="Restaurant.html" class="block text-base text-gray-600 hover:text-black py-1">Restaurants</a>
+              <a href="Market.html" class="block text-base text-gray-600 hover:text-black py-1">Markets</a>
+              <a href="tourist.html" class="block text-base text-gray-600 hover:text-black py-1">Tourism</a>
+            </div>
+          </div>
           <a href="Government-announcement.html" class="block text-lg text-gray-700 hover:text-black">Announcements</a>
           <a href="Admin page.html" class="block text-lg text-gray-700 hover:text-black">Admin</a>
           <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
@@ -240,7 +256,10 @@
                 State. Find hospitals, clinics, and specialists near you.</p>
               <div class="mt-7 mb-0">
                 <button
-                  class="border border-black px-6 py-4 rounded text-lg hover:bg-black hover:text-white">View</button>
+                  class="w-full md:w-auto border border-black px-8 py-3 rounded text-lg font-medium hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group mt-7">
+                  <span>View</span>
+                  <i class="bi bi-chevron-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
               </div>
             </div>
           </a>
@@ -257,9 +276,10 @@
                 <div class="p-5 flex-grow">
                   <h3 class="text-2xl font-bold">Education</h3>
                   <p class="text-xl text-gray-900 mt-2">Schools and training centers</p>
-                  <button class="mt-4 text-lg text-gray-900 font-medium hover:text-black flex items-center gap-1">
+                  <button
+                    class="w-full md:w-auto border border-black px-8 py-3 rounded text-lg font-medium hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group mt-7">
                     <span>View</span>
-                    <i class="bi bi-chevron-right"></i>
+                    <i class="bi bi-chevron-right group-hover:translate-x-1 transition-transform"></i>
                   </button>
                 </div>
               </div>
@@ -274,9 +294,10 @@
                 <div class="p-5 flex-grow">
                   <h3 class="text-2xl font-bold">Markets</h3>
                   <p class="text-xl text-gray-900 mt-2">Trading posts and vendors</p>
-                  <button class="mt-4 text-lg text-gray-900 font-medium hover:text-black flex items-center gap-1">
+                  <button
+                    class="w-full md:w-auto border border-black px-8 py-3 rounded text-lg font-medium hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group mt-7">
                     <span>View</span>
-                    <i class="bi bi-chevron-right"></i>
+                    <i class="bi bi-chevron-right group-hover:translate-x-1 transition-transform"></i>
                   </button>
                 </div>
               </div>
@@ -293,9 +314,10 @@
                 <p class="text-lg font-semibold text-gray-900">Food</p>
                 <h3 class="text-2xl font-bold mt-1">Restaurants and food vendors</h3>
                 <p class="text-xl text-gray-900 mt-2">Discover local dining and food services</p>
-                <button class="mt-4 text-lg text-gray-900 font-medium hover:text-black flex items-center gap-1">
+                <button
+                  class="w-full md:w-auto border border-black px-8 py-3 rounded text-lg font-medium hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group mt-7">
                   <span>View</span>
-                  <i class="bi bi-chevron-right"></i>
+                  <i class="bi bi-chevron-right group-hover:translate-x-1 transition-transform"></i>
                 </button>
               </div>
             </div>
@@ -333,7 +355,7 @@
         <div class="p-10">
           <div class="flex items-center space-x-4 text-lg text-gray-900">
             <span
-              class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition">Government</span>
+              class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition mb-5">Government</span>
             <span>2 min read</span>
           </div>
           <h3 class="text-2xl font-bold mt-3">
@@ -357,7 +379,7 @@
         <div class="p-10">
           <div class="flex items-center space-x-4 text-lg text-gray-900">
             <span
-              class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition">Education</span>
+              class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition mb-5">Education</span>
             <span>3 min read</span>
           </div>
           <h3 class="text-2xl font-bold mt-3">
@@ -380,7 +402,8 @@
         </div>
         <div class="p-10">
           <div class="flex items-center space-x-4 text-lg text-gray-900">
-            <span class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition">Health</span>
+            <span
+              class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition mb-5">Health</span>
             <span>2 min read</span>
           </div>
           <h3 class="text-2xl font-bold mt-3">
@@ -404,7 +427,7 @@
         <div class="p-10">
           <div class="flex items-center space-x-4 text-lg text-gray-900">
             <span
-              class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition">Commerce</span>
+              class="font-bold border border-black p-3 hover:bg-black hover:text-white btn-transition mb-5">Commerce</span>
             <span>4 min read</span>
           </div>
           <h3 class="text-2xl font-bold mt-3">

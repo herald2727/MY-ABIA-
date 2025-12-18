@@ -126,7 +126,30 @@
                     </div>
                     <a href="gov.html" class="block text-lg text-gray-700 hover:text-black">Government</a>
                     <a href="About page.html" class="block text-lg text-gray-700 hover:text-black">About</a>
-                    <a href="Category.html" class="block text-lg text-gray-700 hover:text-black">Categories</a>
+                    <div class="relative">
+                        <button
+                            onclick="document.getElementById('mobile-categories-dropdown').classList.toggle('hidden'); document.getElementById('mobile-categories-chevron').classList.toggle('rotate-180')"
+                            class="w-full flex justify-between items-center text-lg text-gray-700 hover:text-black focus:outline-none">
+                            Categories
+                            <i id="mobile-categories-chevron"
+                                class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div id="mobile-categories-dropdown"
+                            class="hidden pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+                            <a href="business-economy.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Business</a>
+                            <a href="Health.html" class="block text-base text-gray-600 hover:text-black py-1">Health
+                                Services</a>
+                            <a href="Education.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Education</a>
+                            <a href="Restaurant.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Restaurants</a>
+                            <a href="Market.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Markets</a>
+                            <a href="tourist.html"
+                                class="block text-base text-gray-600 hover:text-black py-1">Tourism</a>
+                        </div>
+                    </div>
                     <a href="Government-announcement.html"
                         class="block text-lg text-gray-700 hover:text-black">Announcements</a>
                     <a href="Admin page.html" class="block text-lg text-gray-700 hover:text-black">Admin</a>
@@ -341,57 +364,57 @@
     </footer>
 
     <script>
-    /**
-    * SECTION 2: SEARCH FUNCTIONALITY
-    */
-    const desktopSearch = document.getElementById('desktop-search-input');
-    const mobileSearch = document.getElementById('mobile-search-input');
-    const providerCards = document.querySelectorAll('.provider-card');
-    const noResultsMsg = document.getElementById('no-results');
+        /**
+        * SECTION 2: SEARCH FUNCTIONALITY
+        */
+        const desktopSearch = document.getElementById('desktop-search-input');
+        const mobileSearch = document.getElementById('mobile-search-input');
+        const providerCards = document.querySelectorAll('.provider-card');
+        const noResultsMsg = document.getElementById('no-results');
 
-    function filterCards(e) {
-    const searchText = e.target.value.toLowerCase();
-    let hasVisibleCards = false;
+        function filterCards(e) {
+            const searchText = e.target.value.toLowerCase();
+            let hasVisibleCards = false;
 
-    providerCards.forEach(card => {
-    const title = card.querySelector('.card-title').textContent.toLowerCase();
-    const location = card.querySelector('.card-location').textContent.toLowerCase();
+            providerCards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const location = card.querySelector('.card-location').textContent.toLowerCase();
 
-    if (title.includes(searchText) || location.includes(searchText)) {
-    card.classList.remove('hidden-card');
-    hasVisibleCards = true;
-    } else {
-    card.classList.add('hidden-card');
-    }
-    });
+                if (title.includes(searchText) || location.includes(searchText)) {
+                    card.classList.remove('hidden-card');
+                    hasVisibleCards = true;
+                } else {
+                    card.classList.add('hidden-card');
+                }
+            });
 
-    if (hasVisibleCards) {
-    noResultsMsg.classList.add('hidden');
-    } else {
-    noResultsMsg.classList.remove('hidden');
-    }
-    }
+            if (hasVisibleCards) {
+                noResultsMsg.classList.add('hidden');
+            } else {
+                noResultsMsg.classList.remove('hidden');
+            }
+        }
 
-    desktopSearch.addEventListener('input', filterCards);
-    mobileSearch.addEventListener('input', filterCards);
+        desktopSearch.addEventListener('input', filterCards);
+        mobileSearch.addEventListener('input', filterCards);
 
 
 
-    /**
-    * SECTION 3: BUTTON HANDLERS
-    */
-    function viewDetails(providerName) {
-    console.log(`User clicked on: ${providerName}`);
-    alert(`Opening details for: ${providerName}`);
-    }
+        /**
+        * SECTION 3: BUTTON HANDLERS
+        */
+        function viewDetails(providerName) {
+            console.log(`User clicked on: ${providerName}`);
+            alert(`Opening details for: ${providerName}`);
+        }
 
-    function goToPage2() {
-    window.location.href = "3.html";
-    };
+        function goToPage2() {
+            window.location.href = "3.html";
+        };
 
-    function goToPage3() {
-    window.location.href = "2.html";
-    };
+        function goToPage3() {
+            window.location.href = "2.html";
+        };
     </script>
     <script src="js/animations.js"></script>
     <script src="js/global-search.js"></script>

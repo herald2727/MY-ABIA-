@@ -110,7 +110,23 @@
           </div>
           <a href="gov.html" class="block text-lg text-gray-700 hover:text-black">Government</a>
           <a href="About page.html" class="block text-lg text-gray-700 hover:text-black">About</a>
-          <a href="Category.html" class="block text-lg text-gray-700 hover:text-black">Categories</a>
+          <div class="relative">
+            <button
+              onclick="document.getElementById('mobile-categories-dropdown').classList.toggle('hidden'); document.getElementById('mobile-categories-chevron').classList.toggle('rotate-180')"
+              class="w-full flex justify-between items-center text-lg text-gray-700 hover:text-black focus:outline-none">
+              Categories
+              <i id="mobile-categories-chevron"
+                class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="mobile-categories-dropdown" class="hidden pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+              <a href="business-economy.html" class="block text-base text-gray-600 hover:text-black py-1">Business</a>
+              <a href="Health.html" class="block text-base text-gray-600 hover:text-black py-1">Health Services</a>
+              <a href="Education.html" class="block text-base text-gray-600 hover:text-black py-1">Education</a>
+              <a href="Restaurant.html" class="block text-base text-gray-600 hover:text-black py-1">Restaurants</a>
+              <a href="Market.html" class="block text-base text-gray-600 hover:text-black py-1">Markets</a>
+              <a href="tourist.html" class="block text-base text-gray-600 hover:text-black py-1">Tourism</a>
+            </div>
+          </div>
           <a href="Government-announcement.html" class="block text-lg text-gray-700 hover:text-black">Announcements</a>
           <a href="Admin page.html" class="block text-lg text-gray-700 hover:text-black">Admin</a>
           <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
@@ -127,70 +143,71 @@
 
 
 
-  <section class="w-full font-serif mt-7 mb-7 md:mt-10 md:mb-10 pb-10 leading-tight">
-    <div class="px-4 sm:px-6 py-10 mx-auto max-w-7xl">
-      <h1 class="font-bold text-4xl sm:text-6xl leading-tight">Admin dashboard</h1>
-      <p class="mt-3 text-xl sm:text-2xl text-gray-700 font-bold">Review and manage business submissions for My Abia
-        directory</p>
+  <section class="w-full mt-10 md:mt-20 mb-10 pb-10 leading-tight">
+    <div class="px-4 sm:px-6 py-10 mx-auto max-w-7xl animate-fade-up">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">Admin dashboard</h1>
+      <p class="mt-4 text-xl sm:text-2xl text-gray-700 font-bold max-w-3xl">Review and manage business submissions for
+        My Abia directory</p>
     </div>
   </section>
 
-  <main class="flex flex-col lg:flex-row gap-6 lg:gap-10 mx-auto max-w-7xl mt-10 mb-20 pb-20 px-4 sm:px-6">
+  <main class="flex flex-col lg:flex-row gap-8 lg:gap-16 mx-auto max-w-7xl mb-24 px-4 sm:px-6">
 
-    <section class="space-y-6 flex-1">
+    <section class="space-y-6 flex-1 animate-fade-up">
       <div>
-        <p class="text-lg sm:text-lg mb-2 text-gray-700 font-semibold">Navigate</p>
-        <h1 class="text-4xl sm:text-5xl font-semibold mt-2">Manage submissions and directory listings</h1>
+        <p class="text-lg sm:text-xl mb-3 text-gray-600 font-medium uppercase tracking-wider">Navigate</p>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 leading-tight">Manage submissions and directory
+          listings</h2>
       </div>
     </section>
 
-    <section class="flex-1 lg:flex-1">
-      <p class="text-lg sm:text-xl text-gray-700 font-bold font-serif">
+    <section class="flex-1 lg:flex-1 animate-fade-up" style="animation-delay: 100ms;">
+      <p class="text-lg sm:text-xl text-gray-700 leading-relaxed font-medium">
         The dashboard shows all business submissions awaiting your review.
         Filter by status to see pending approvals or already approved listings.
       </p>
 
-      <div class="mt-6 space-y-3 text-lg sm:text-lg text-gray-700 font-bold">
-        <div class="flex items-center space-x-2 gap-2">
+      <div class="mt-10 space-y-4 text-lg sm:text-xl text-gray-800 font-bold">
+        <div class="flex items-center space-x-3 gap-2 p-2 hover:bg-gray-50 rounded-lg transition cursor-pointer">
           <span class="text-black"><i class="bi bi-grid-1x2-fill"></i></span>
           <p>Dashboard</p>
         </div>
-        <div class="flex items-center space-x-2 gap-2">
+        <div class="flex items-center space-x-3 gap-2 p-2 hover:bg-gray-50 rounded-lg transition cursor-pointer">
           <span class="text-blue-500"><i class="bi bi-patch-check-fill"></i></span>
           <p>Approved listings</p>
         </div>
-        <div class="flex items-center space-x-2 gap-2">
-          <span class="text-blue-500"><i class="bi bi-patch-exclamation-fill"></i></span>
+        <div class="flex items-center space-x-3 gap-2 p-2 hover:bg-gray-50 rounded-lg transition cursor-pointer">
+          <span class="text-yellow-500"><i class="bi bi-patch-exclamation-fill"></i></span>
           <p>Pending approvals</p>
         </div>
       </div>
 
-      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+      <div class="mt-10 flex flex-col sm:flex-row gap-5">
         <button
-          class="border border-black px-5 py-3 sm:px-5 sm:py-3 hover:bg-black hover:text-white rounded text-base sm:text-lg transition font-bold">Logout</button>
+          class="border border-black px-8 py-3 hover:bg-black hover:text-white rounded text-lg transition-all duration-300 font-bold">Logout</button>
         <button
-          class="text-base sm:text-lg flex items-center justify-center sm:justify-start space-x-1 hover:text-gray-600 transition font-bold">
-          <span>Settings</span><span><i class="bi bi-chevron-right"></i></span>
+          class="text-lg flex items-center justify-center sm:justify-start space-x-2 hover:text-gray-600 transition duration-300 font-bold px-4">
+          <span>Settings</span><i class="bi bi-chevron-right text-sm"></i>
         </button>
       </div>
     </section>
   </main>
 
-  <section class="px-4 sm:px-6 mt-12 mx-auto max-w-7xl text-3xl sm:text-4xl font-serif font-bold pb-20">
-    <p class="text-base sm:text-lg text-gray-700">Submissions</p>
+  <section class="px-4 sm:px-6 mt-20 mx-auto max-w-7xl pb-24 animate-fade-up">
+    <p class="text-lg sm:text-xl text-gray-600 font-medium uppercase tracking-wider mb-4">Submissions</p>
 
-    <h1 class="text-3xl sm:text-5xl font-bold mt-3 space-y-1 sm:space-y-2">
-      <div>Review each business submission carefully.</div>
-      <div>Approve entries that meet directory standards</div>
-      <div>or reject those that do not.</div>
-    </h1>
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 space-y-2 leading-tight">
+      <div class="mb-2">Review each business submission carefully.</div>
+      <div class="mb-2">Approve entries that meet directory standards</div>
+      <div class="text-gray-500">or reject those that do not.</div>
+    </h2>
 
-    <div class="mt-6 flex flex-col sm:flex-row gap-4">
+    <div class="mt-10 flex flex-col sm:flex-row gap-5">
       <button
-        class="border border-black px-5 py-3 rounded text-base sm:text-lg hover:bg-black hover:text-white transition font-bold">Refresh</button>
+        class="border border-black px-8 py-3 rounded text-lg hover:bg-black hover:text-white transition-all duration-300 font-bold">Refresh</button>
       <button
-        class="text-base sm:text-lg flex items-center justify-center sm:justify-start space-x-1 hover:text-gray-600 transition font-bold">
-        <span>Export</span><span><i class="bi bi-chevron-right"></i></span>
+        class="text-lg flex items-center justify-center sm:justify-start space-x-2 hover:text-gray-600 transition duration-300 font-bold px-4">
+        <span>Export</span><i class="bi bi-chevron-right text-sm"></i>
       </button>
     </div>
   </section>

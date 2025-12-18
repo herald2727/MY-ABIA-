@@ -173,7 +173,23 @@
           </div>
           <a href="gov.html" class="block text-lg text-gray-700 hover:text-black">Government</a>
           <a href="About page.html" class="block text-lg text-gray-700 hover:text-black">About</a>
-          <a href="Category.html" class="block text-lg text-gray-700 hover:text-black">Categories</a>
+          <div class="relative">
+            <button
+              onclick="document.getElementById('mobile-categories-dropdown').classList.toggle('hidden'); document.getElementById('mobile-categories-chevron').classList.toggle('rotate-180')"
+              class="w-full flex justify-between items-center text-lg text-gray-700 hover:text-black focus:outline-none">
+              Categories
+              <i id="mobile-categories-chevron"
+                class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="mobile-categories-dropdown" class="hidden pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+              <a href="business-economy.html" class="block text-base text-gray-600 hover:text-black py-1">Business</a>
+              <a href="Health.html" class="block text-base text-gray-600 hover:text-black py-1">Health Services</a>
+              <a href="Education.html" class="block text-base text-gray-600 hover:text-black py-1">Education</a>
+              <a href="Restaurant.html" class="block text-base text-gray-600 hover:text-black py-1">Restaurants</a>
+              <a href="Market.html" class="block text-base text-gray-600 hover:text-black py-1">Markets</a>
+              <a href="tourist.html" class="block text-base text-gray-600 hover:text-black py-1">Tourism</a>
+            </div>
+          </div>
           <a href="Government-announcement.html" class="block text-lg text-gray-700 hover:text-black">Announcements</a>
           <a href="Admin page.html" class="block text-lg text-gray-700 hover:text-black">Admin</a>
           <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
@@ -207,7 +223,7 @@
         <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
           <button
             class="bg-white text-gray-900 px-6 py-3 sm:px-5 sm:py-4 hover:bg-gray-200 hover:text-black text-base font-semibold sm:text-lg rounded-md btn-transition shadow-lg">
-            View Official Portal
+            <a href="https://abiastate.gov.ng/" target="_blank">View Official Portal</a>
           </button>
         </div>
       </div>
@@ -221,6 +237,43 @@
     <div class="max-w-7xl mx-auto px-4">
 
       <div class="flex flex-col gap-12">
+
+        <!-- Governor's Card -->
+        <div class="flex flex-col md:flex-row items-center border border-black card-hover animate-fade-up">
+          <div
+            class="w-full md:w-1/2 h-64 md:h-auto bg-gray-100 flex items-center justify-center overflow-hidden relative group">
+            <img src="https://i.pinimg.com/736x/92/1d/9e/921d9ede0c07b3b6989b43515bab8f1e.jpg"
+              alt="His Excellency, Dr. Alex Otti"
+              class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              onerror="this.src='https://i.pinimg.com/736x/92/1d/9e/921d9ede0c07b3b6989b43515bab8f1e.jpg'">
+          </div>
+          <div class="w-full md:w-1/2 p-8 md:p-12">
+            <h2 class="text-3xl font-bold mb-4">His Excellency, Dr. Alex Otti</h2>
+            <p class="text-lg text-gray-700 mb-6">
+              Dr. Alex Chioma Otti, OFR is the Governor of Abia State, Nigeria, sworn in on 29 May 2023 after winning
+              the 2023
+              election on the Labour Party platform.
+
+              Born on 18 February 1965, he hails from Isiala-Ngwa South LGA, Abia State. He holds a First Class degree
+              in Economics
+              from the University of Port Harcourt and an MBA from the University of Lagos, with executive training from
+              top global
+              business schools.
+
+              Dr. Otti is a renowned banker and economist, having served as Group Managing Director/CEO of Diamond Bank
+              Plc before
+              retiring in 2014. He is also a writer and former newspaper columnist.
+
+              As governor, he focuses on infrastructure, economic reform, healthcare, and workers’ welfare. He is
+              married to Priscilla
+              Otti and they have three children.
+            </p>
+            <button class="border border-black px-6 py-3 rounded-md text-lg hover:bg-black hover:text-white transition"
+              onclick="window.open('https://abiastate.gov.ng', '_blank')">
+              Meet the Governor
+            </button>
+          </div>
+        </div>
 
 
         <div class="flex flex-col md:flex-row items-center border border-black card-hover animate-fade-up">
