@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Abia - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="src/output.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Times New Roman"', 'Times', 'serif'],
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .btn-transition {
+            transition: all 0.3s cubic-bezier(0.22, 0.8, 0.52, 1);
+        }
+
+        .btn-transition:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .input-transition {
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .input-transition:focus {
+            outline: none;
+            border-color: #16a34a;
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+        }
+
+        .social-btn {
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .divider {
+            position: relative;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d1d5db, transparent);
+        }
+
+        .divider-text {
+            position: relative;
+            background: white;
+            padding: 0 12px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-white via-gray-50 to-green-50 min-h-screen font-serif text-gray-900 overflow-x-hidden">
+    
+    <!-- Navigation Bar -->
+    <nav class="border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="Home page.html" class="text-3xl font-bold italic text-gray-900 flex items-center hover:text-green-600 transition">
+                    <span class="mr-2 text-green-600"><i class="bi bi-ubuntu"></i></span>My Abia
+                </a>
+                <div class="flex items-center space-x-4">
+                    <a href="Home page.html" class="text-gray-700 hover:text-black transition font-semibold">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Login Container -->
+    <div class="min-h-[calc(100vh-80px)] flex items-center justify-center px-4 py-12">
+        <div class="w-full max-w-md animate-slide-up">
+            <!-- Card Container -->
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-green-600 to-green-700 px-8 py-10 text-center">
+                    <h1 class="text-5xl font-bold text-green-600 mb-3 drop-shadow-lg">Welcome Back</h1>
+                    <p class="text-black text-base font-semibold drop-shadow-md">Sign in to access your My Abia account</p>
+                </div>
+
+                <!-- Content -->
+                <div class="px-8 py-10">
+                    
+                    <!-- Social Login Options -->
+                    <div class="space-y-3 mb-8">
+                        
+                        <!-- Google Login -->
+                        <!-- Place your Google logo file in: images/google-logo.png -->
+                        <button class="w-full social-btn group flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-300">
+                            <img src="images/google11.png" alt="Google" class="w-6 h-6 object-contain">
+                            <span class="font-semibold text-gray-700">Sign in with Google</span>
+                        </button>
+
+                        <!-- GitHub Login -->
+                        <button class="w-full social-btn group flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-lg hover:border-gray-900 hover:bg-gray-900 hover:text-white transition duration-300">
+                            <i class="bi bi-github text-xl"></i>
+                            <span class="font-semibold">Sign in with GitHub</span>
+                        </button>
+
+                        <!-- Phone Login -->
+                        <button class="w-full social-btn group flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-lg hover:border-green-600 hover:bg-green-50 transition duration-300">
+                            <i class="bi bi-telephone-fill text-lg text-green-600"></i>
+                            <span class="font-semibold text-gray-700">Sign in with Phone</span>
+                        </button>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="divider my-8">
+                        <div class="divider-text">Or continue with more options</div>
+                    </div>
+
+                    <!-- Additional Social Options -->
+                    <div class="grid grid-cols-4 gap-3 mb-8">
+                        
+                        <!-- Facebook -->
+                        <button class="social-btn flex items-center justify-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-600 hover:bg-blue-50 transition" title="Facebook">
+                            <i class="bi bi-facebook text-xl text-blue-600"></i>
+                        </button>
+
+                        <!-- Twitter -->
+                        <button class="social-btn flex items-center justify-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition" title="Twitter">
+                            <i class="bi bi-twitter text-xl text-blue-400"></i>
+                        </button>
+
+                        <!-- LinkedIn -->
+                        <button class="social-btn flex items-center justify-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-700 hover:bg-blue-50 transition" title="LinkedIn">
+                            <i class="bi bi-linkedin text-xl text-blue-700"></i>
+                        </button>
+
+                        <!-- Microsoft -->
+                        <button class="social-btn flex items-center justify-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition" title="Microsoft">
+                            <i class="bi bi-microsoft text-xl text-blue-500"></i>
+                        </button>
+                    </div>
+
+                    <!-- Email Login Section -->
+                    <div class="divider my-8">
+                        <div class="divider-text">Or use email</div>
+                    </div>
+
+                    <!-- Email Form -->
+                    <form id="loginForm" class="space-y-4">
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                placeholder="your@email.com"
+                                class="input-transition w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 bg-gray-50"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                            <div class="relative">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    placeholder="••••••••"
+                                    class="input-transition w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 bg-gray-50"
+                                    required
+                                >
+                                <button 
+                                    type="button" 
+                                    onclick="togglePassword()"
+                                    class="absolute right-3 top-3 text-gray-600 hover:text-gray-900 transition"
+                                >
+                                    <i class="bi bi-eye-fill" id="toggleEye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Remember Me & Forgot Password -->
+                        <div class="flex items-center justify-between text-sm">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-green-600 cursor-pointer">
+                                <span class="text-gray-700 group-hover:text-black transition">Remember me</span>
+                            </label>
+                            <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition">Forgot password?</a>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button 
+                            type="submit"
+                            class="btn-transition w-full mt-8 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold py-4 px-4 rounded-lg hover:from-green-700 hover:to-green-800 transition shadow-lg hover:shadow-xl"
+                        >
+                            <span class="flex items-center justify-center gap-2">
+                                <i class="bi bi-lock-fill"></i>
+                                Sign In Now
+                            </span>
+                        </button>
+                    </form>
+
+                    <!-- Sign Up Link -->
+                    <p class="text-center text-gray-600 mt-6 text-sm">
+                        Don't have an account? 
+                        <a href="#" class="text-green-600 hover:text-green-700 font-bold transition">Create one</a>
+                    </p>
+                </div>
+
+                <!-- Footer -->
+                <div class="bg-gray-50 border-t border-gray-200 px-8 py-4 text-center text-xs text-gray-600">
+                    <p>By signing in, you agree to our <a href="#" class="text-green-600 hover:text-green-700 font-semibold">Terms of Service</a> and <a href="#" class="text-green-600 hover:text-green-700 font-semibold">Privacy Policy</a></p>
+                </div>
+            </div>
+
+            <!-- Security Info -->
+            <div class="mt-8 text-center text-sm text-gray-600">
+                <p class="flex items-center justify-center gap-2">
+                    <i class="bi bi-shield-check text-green-600"></i>
+                    Your information is secure and encrypted
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Password Visibility
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleEye = document.getElementById('toggleEye');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleEye.classList.remove('bi-eye-fill');
+                toggleEye.classList.add('bi-eye-slash-fill');
+            } else {
+                passwordInput.type = 'password';
+                toggleEye.classList.remove('bi-eye-slash-fill');
+                toggleEye.classList.add('bi-eye-fill');
+            }
+        }
+
+        // Form Submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email && password) {
+                // Add your authentication logic here
+                console.log('Login attempt:', { email, password });
+                alert('Login functionality will be connected to your backend');
+            }
+        });
+
+        // Social Login Handlers
+        document.querySelectorAll('.social-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const loginType = this.textContent.trim();
+                console.log('Social login:', loginType);
+                alert(loginType + ' authentication will be configured');
+            });
+        });
+    </script>
+</body>
+</html>
